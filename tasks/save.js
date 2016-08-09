@@ -1,4 +1,4 @@
-// process.env.DEBUG = 'crawl:*';
+process.env.DEBUG = 'crawl:*';
 var debug = require('debug')('crawl:save');
 var async = require('async');
 var models = require('./models');

@@ -1,7 +1,7 @@
 var request = require('request');
 var iconv = require('iconv-lite');
 var cheerio = require('cheerio');
-// process.env.DEBUG = 'crawl:*';
+process.env.DEBUG = 'crawl:*';
 var debug = require('debug')('crawl:read');
 //读取分类列表
 exports.category = function(url,callback){

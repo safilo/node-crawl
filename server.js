@@ -31,12 +31,12 @@ app.listen(8080, function() {
 });
 
 //启动一个计划任务，每天抓取一次最新的数据
-/*var path = require('path');
+var path = require('path');
 var CronJob = require('cron').CronJob;
 var spawn = require('child_process').spawn;
 var job = new CronJob('1 1 23 * * *',function(){
     // process.execPath = node的可执行文件路径
     spawn(process.execPath,[path.join(__dirname,'tasks/main.js')]);
 });
-job.start();*/
+job.start();
 
