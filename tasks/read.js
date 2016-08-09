@@ -1,7 +1,7 @@
 var request = require('request');
 var iconv = require('iconv-lite');
 var cheerio = require('cheerio');
-process.env.DEBUG = 'crawl:*';
+// process.env.DEBUG = 'crawl:*';
 var debug = require('debug')('crawl:read');
 //读取分类列表
 exports.category = function(url,callback){
@@ -42,7 +42,7 @@ exports.tv = function(url,cid,callback){
                 url:$me.attr('href'),
                 cid:cid //此电视剧的分类ID
             };
-            // debug('读取电视剧:'+item.name);
+            debug('读取电视剧:'+item.name);
             items.push(item);
         });
         callback(null,items);
