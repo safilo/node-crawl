@@ -16,7 +16,7 @@ exports.category = function(url,callback){
          var item = {
              name:$me.text(),
              url:'http://top.baidu.com'+$me.attr('href').slice(1)
-         }
+         };
           var result = item.url.match(/buzz\?b=(\d+)&c=/);
           item.id = result[1];
           debug('读取分类:'+item.name);
@@ -24,8 +24,8 @@ exports.category = function(url,callback){
       });
       //console.log(items);
       callback(null,items);
-  })
-}
+  });
+};
 //exports.category('http://top.baidu.com/category?c=2&fr=topindex');
 //读取分类下面的电视剧列表
 exports.tv = function(url,cid,callback){
@@ -41,12 +41,12 @@ exports.tv = function(url,cid,callback){
                 name:$me.text(),
                 url:$me.attr('href'),
                 cid:cid //此电视剧的分类ID
-            }
+            };
             debug('读取电视剧:'+item.name);
             items.push(item);
         });
         callback(null,items);
-    })
-}
+    });
+};
 //exports.tv('http://top.baidu.com/buzz?b=466&c=2',466);
 
