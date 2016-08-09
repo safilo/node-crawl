@@ -42,7 +42,7 @@ exports.tv = function(url,cid,callback){
                 url:$me.attr('href'),
                 cid:cid //此电视剧的分类ID
             };
-            debug('读取电视剧:'+item.name);
+            // debug('读取电视剧:'+item.name);
             items.push(item);
         });
         callback(null,items);

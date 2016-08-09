@@ -36,5 +36,5 @@ async.series([
         save.tv(tvs,cb);
     }
 ],function(err,result){
-    debug('所有的任务执行完毕!');
+    // debug('所有的任务执行完毕!');
 });
